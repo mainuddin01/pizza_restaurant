@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a02da1b7-4d1b-4557-902f-7b85daff0924" name="Default" comment="" />
+    <list default="true" id="a02da1b7-4d1b-4557-902f-7b85daff0924" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/dishes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/dishes/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/dishes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pizza_restaurant/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pizza_restaurant/settings.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,7 +14,41 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dishes/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pizza_restaurant/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dishes/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -18,9 +56,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/dishes/admin.py" />
         <option value="$PROJECT_DIR$/pizza_restaurant/settings.py" />
         <option value="$PROJECT_DIR$/dishes/models.py" />
-        <option value="$PROJECT_DIR$/dishes/admin.py" />
       </list>
     </option>
   </component>
@@ -51,6 +89,17 @@
             <path>
               <item name="pizza_restaurant" type="b2602c69:ProjectViewProjectNode" />
               <item name="pizza_restaurant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pizza_restaurant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pizza_restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="dishes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pizza_restaurant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pizza_restaurant" type="462c0819:PsiDirectoryNode" />
+              <item name="dishes" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pizza_restaurant" type="b2602c69:ProjectViewProjectNode" />
@@ -98,6 +147,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -105,8 +155,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.59620595" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23997134" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.31436315" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23997134" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -142,27 +192,27 @@
     <entry file="file://$PROJECT_DIR$/dishes/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dishes/models.py">
+    <entry file="file://$PROJECT_DIR$/pizza_restaurant/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="5" lean-forward="true" selection-end-line="53" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pizza_restaurant/settings.py">
+    <entry file="file://$PROJECT_DIR$/dishes/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="22" column="63" lean-forward="true" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+        <state relative-caret-position="271">
+          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
