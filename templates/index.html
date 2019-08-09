@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 {% load static %}
 <html lang="en">
-   
+
 <!-- Mirrored from html.smartcmsmarket.net/pizza/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Dec 2018 12:03:16 GMT -->
 <head>
       <meta charset="UTF-8" />
@@ -144,37 +144,18 @@
             </div>
             <div class="col-md-8 col-sm-12 col-xs-12 detail">
                <div class="title-welcom">
-                  <h1>Welcome</h1>
+                  <h1>{{ greeting_obj.title }}</h1>
                </div>
-               <p>Integer non arcu ac nunc dapibus condimentum. Curabitur ornare sem sed massa ornare, id placerat neque pulvinar. Nulla auctor felis nunc, vel semper erat auctor quis. Mauris euismod volutpat enim quis lobortis. Morbi gravida risus nec diam tincidunt lobortis sed a elit. </p>
-               <div class="col-md-6 col-sm-12 col-xs-12 col-wel">
-                  <span class="icon"><i class="fa fa-cutlery" aria-hidden="true"></i></span>
-                  <div class="wel-des">
-                     <h3>We Cooking With Passion</h3>
-                     <p>Nam fringilla bibendum elit sed cursus. Sed ut lectus a ipsum tincidunt tempus. Praesent elementum </p>
+               <p>{{ greeting_obj.description }}</p>
+               {% for item in greeting_obj.greetingitem_set.all %}
+                  <div class="col-md-6 col-sm-12 col-xs-12 col-wel">
+                     <span class="icon"><i class="fa {{ item.icon_class }}" aria-hidden="true"></i></span>
+                     <div class="wel-des">
+                        <h3>{{ item.title }}</h3>
+                        <p>{{ item.description }}</p>
+                     </div>
                   </div>
-               </div>
-               <div class="col-md-6 col-sm-12 col-xs-12 col-wel">
-                  <span class="icon"><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
-                  <div class="wel-des">
-                     <h3>We Serve Good Quality Pizza</h3>
-                     <p>Nam fringilla bibendum elit sed cursus. Sed ut lectus a ipsum tincidunt tempus. Praesent elementum </p>
-                  </div>
-               </div>
-               <div class="col-md-6 col-sm-12 col-xs-12 col-wel">
-                  <span class="icon"><i class="fa fa-life-ring" aria-hidden="true"></i></span>
-                  <div class="wel-des">
-                     <h3>We are Creative</h3>
-                     <p>Nam fringilla bibendum elit sed cursus. Sed ut lectus a ipsum tincidunt tempus. Praesent elementum </p>
-                  </div>
-               </div>
-               <div class="col-md-6 col-sm-12 col-xs-12 col-wel">
-                  <span class="icon"><i class="fa fa-truck" aria-hidden="true"></i></span>
-                  <div class="wel-des">
-                     <h3>We Deliverd Pizza with Time </h3>
-                     <p>Nam fringilla bibendum elit sed cursus. Sed ut lectus a ipsum tincidunt tempus. Praesent elementum </p>
-                  </div>
-               </div>
+               {% endfor %}
             </div>
          </div>
       </div>
@@ -186,144 +167,31 @@
                <h1>Feautred Product</h1>
             </div>
             <div class="list-product">
+               {% for dish in dishes %}
                <div class="col-md-4 col-sm-6 col-xs-12">
                   <div class="product-feautred">
                      <div class="pro-img">
-                        <img src="{% static '/images/pr1.jpg' %}" alt="Pizza" class="img-responsive">
+                        <img src="{{ dish.image.url }}" alt="Pizza" class="img-responsive">
                         <div class="overlay">
                         </div>
                         <div class="mask">
                            <i class="fa fa-cutlery" aria-hidden="true"></i>
                            <div class="price">
-                              <span>$ 150.00</span>
+                              <span>$ {{ dish.price }}</span>
                            </div>
                         </div>
                      </div>
                      <div class="pr-detail">
                         <div class="pr-title">
-                           <a href="productdetail.html">Cheese Pizza</a>
+                           <a href="productdetail.html">{{ dish.name }}</a>
                         </div>
-                        <p>Phasellus efficitur lorem libero, vel ultricies eros pulvinar vel. Cras aliquam tortor.</p>
+                        <p>{{ dish.description }}</p>
                         <div class="button-order"><a href="cart.html">Order Now</a>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-md-4 col-sm-6 col-xs-12">
-                  <div class="product-feautred">
-                     <div class="pro-img">
-                        <img src="{% static '/images/pr2.png' %}" alt="Pizza" class="img-responsive">
-                        <div class="overlay">
-                        </div>
-                        <div class="mask">
-                           <i class="fa fa-cutlery" aria-hidden="true"></i>
-                           <div class="price">
-                              <span>$ 150.00</span>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="pr-detail">
-                        <div class="pr-title">
-                           <a href="productdetail.html">SpicyPizza</a>
-                        </div>
-                        <p>Phasellus efficitur lorem libero, vel ultricies eros pulvinar vel. Cras aliquam tortor.</p>
-                        <div class="button-order"><a href="cart.html">Order Now</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-6 col-xs-12">
-                  <div class="product-feautred">
-                     <div class="pro-img">
-                        <img src="{% static '/images/pr3.jpg' %}" alt="Pizza" class="img-responsive">
-                        <div class="overlay">
-                        </div>
-                        <div class="mask">
-                           <i class="fa fa-cutlery" aria-hidden="true"></i>
-                           <div class="price">
-                              <span>$ 150.00</span>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="pr-detail">
-                        <div class="pr-title">
-                           <a href="productdetail.html">Cheese Pizza</a>
-                        </div>
-                        <p>Phasellus efficitur lorem libero, vel ultricies eros pulvinar vel. Cras aliquam tortor.</p>
-                        <div class="button-order"><a href="cart.html">Order Now</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-6 col-xs-12">
-                  <div class="product-feautred">
-                     <div class="pro-img">
-                        <img src="{% static '/images/pr4.png' %}" alt="Pizza" class="img-responsive">
-                        <div class="overlay">
-                        </div>
-                        <div class="mask">
-                           <i class="fa fa-cutlery" aria-hidden="true"></i>
-                           <div class="price">
-                              <span>$ 150.00</span>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="pr-detail">
-                        <div class="pr-title">
-                           <a href="productdetail.html">VGE Pizza</a>
-                        </div>
-                        <p>Phasellus efficitur lorem libero, vel ultricies eros pulvinar vel. Cras aliquam tortor.</p>
-                        <div class="button-order"><a href="cart.html">Order Now</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-6 col-xs-12">
-                  <div class="product-feautred">
-                     <div class="pro-img">
-                        <img src="{% static '/images/pr5.jpg' %}" alt="Pizza" class="img-responsive">
-                        <div class="overlay">
-                        </div>
-                        <div class="mask">
-                           <i class="fa fa-cutlery" aria-hidden="true"></i>
-                           <div class="price">
-                              <span>$ 150.00</span>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="pr-detail">
-                        <div class="pr-title">
-                           <a href="productdetail.html">Griiled CHiken Pizza</a>
-                        </div>
-                        <p>Phasellus efficitur lorem libero, vel ultricies eros pulvinar vel. Cras aliquam tortor.</p>
-                        <div class="button-order"><a href="cart.html">Order Now</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-6 col-xs-12">
-                  <div class="product-feautred">
-                     <div class="pro-img">
-                        <img src="{% static '/images/pr6.jpg' %}" alt="Pizza" class="img-responsive">
-                        <div class="overlay">
-                        </div>
-                        <div class="mask">
-                           <i class="fa fa-cutlery" aria-hidden="true"></i>
-                           <div class="price">
-                              <span>$ 150.00</span>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="pr-detail">
-                        <div class="pr-title">
-                           <a href="productdetail.html">Cheese Pizza</a>
-                        </div>
-                        <p>Phasellus efficitur lorem libero, vel ultricies eros pulvinar vel. Cras aliquam tortor.</p>
-                        <div class="button-order"><a href="cart.html">Order Now</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+               {% endfor %}
             </div>
          </div>
       </div>
@@ -332,14 +200,14 @@
       <div class="Add">
          <div class="container add-content">
             <div class="col-md-6 col-sm-12 col-xs-12 add-left">
-               <h2>Get Delicious Cheese Pizza</h2>
-               <p class="dola">$50 - $900</p>
-               <p class="add-des">Fusce in augue enim. Fusce eget cursus orci. Aliquam dictum sapien in lorem finibus lobortis.tesque id ex consectetur, efficitur nulla tincidunt, dictum nibh. </p>
-               <div class="button-order"><a href="cart.html">Order Now</a>
+               <h2>{{ cta.title }}</h2>
+               <p class="dola">{{ cta.subtitle }}</p>
+               <p class="add-des">{{ cta.description }}</p>
+               <div class="button-order"><a href="{{ cta.button_url }}">{{ cta.button_text }}</a>
                </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 add-right">
-               <img src="{% static '/images/img-add.png' %}" alt="Pizza" class="img-responsive">
+               <img src="{{ cta.image.url }}" alt="Pizza" class="img-responsive">
             </div>
          </div>
       </div>
@@ -356,152 +224,27 @@
                         </div>
                         <div class="prod-coll-1-owl">
                            <div class="row">
-                              <div class="col-md-3 col-sm-6 col-xs-12 col-xs-small-1">
-                                 <div class="product-grid">
-                                    <div class="feature-img">
-                                       <a href="productdetail.html"> <img src="{% static '/images/m1.png' %}" alt="Cheese Pizza" class="img-responsive"> </a>
-                                    </div>
-                                    <div class="prod-info">
-                                       <div class="pro-title">
-                                          <a href="productdetail.html">Cheese Pizza</a> 
+                              {% for dish in dishes %}
+                                 <div class="col-md-3 col-sm-6 col-xs-12 col-xs-small-1">
+                                    <div class="product-grid">
+                                       <div class="feature-img">
+                                          <a href="productdetail.html"> <img src="{{ dish.image.url }}" alt="Cheese Pizza" class="img-responsive"> </a>
                                        </div>
-                                       <p>Nam fringilla bibendum elit sed cursus. Sed ut lectus a ipsum tincidunt tempus. Praesent </p>
-                                       <div class="price-box">
-                                          <p class="special-price"> <span>$150.00</span> </p>
-                                       </div>
-                                       <div class="button-order"><a href="cart.html">Order Now</a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-3 col-sm-6 col-xs-12 col-xs-small-1">
-                                 <div class="product-grid">
-                                    <div class="feature-img">
-                                       <a href="productdetail.html"> <img src="{% static '/images/m2.png' %}" alt="Pizza gà ớt xanh" class="img-responsive"> </a>
-                                    </div>
-                                    <div class="prod-info">
-                                       <div class="pro-title">
-                                          <a href="productdetail.html">Cheese Pizza</a> 
-                                       </div>
-                                       <p>Nam fringilla bibendum elit sed cursus. Sed ut lectus a ipsum tincidunt tempus. Praesent </p>
-                                       <div class="price-box">
-                                          <p class="special-price"> <span>$150.00</span> </p>
-                                       </div>
-                                       <div class="button-order"><a href="cart.html">Order Now</a>
+                                       <div class="prod-info">
+                                          <div class="pro-title">
+                                             <a href="productdetail.html">{{ dish.title }}</a>
+                                          </div>
+                                          <p>{{ dish.description }}</p>
+                                          <div class="price-box">
+                                             <p class="special-price"> <span>${{ dish.price }}</span> </p>
+                                          </div>
+                                          <div class="button-order"><a href="cart.html">Order Now</a>
+                                          </div>
                                        </div>
                                     </div>
                                  </div>
-                              </div>
-                              <div class="col-md-3 col-sm-6 col-xs-12 col-xs-small-1">
-                                 <div class="product-grid">
-                                    <div class="feature-img">
-                                       <a href="productdetail.html"> <img src="{% static '/images/m3.png' %}" alt="Pizza hải sản xúc xích" class="img-responsive"> </a>
-                                    </div>
-                                    <div class="prod-info">
-                                       <div class="pro-title">
-                                          <a href="productdetail.html">Cheese Pizza</a> 
-                                       </div>
-                                       <p>Nam fringilla bibendum elit sed cursus. Sed ut lectus a ipsum tincidunt tempus. Praesent </p>
-                                       <div class="price-box">
-                                          <p class="special-price"> <span>$150.00</span> </p>
-                                       </div>
-                                       <div class="button-order"><a href="cart.html">Order Now</a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-3 col-sm-6 col-xs-12 col-xs-small-1">
-                                 <div class="product-grid">
-                                    <div class="feature-img">
-                                       <a href="productdetail.html"> <img src="{% static '/images/m4.png' %}" alt="Bánh Torrija" class="img-responsive"> </a>
-                                    </div>
-                                    <div class="prod-info">
-                                       <div class="pro-title">
-                                          <a href="productdetail.html">Cheese Pizza</a> 
-                                       </div>
-                                       <p>Nam fringilla bibendum elit sed cursus. Sed ut lectus a ipsum tincidunt tempus. Praesent </p>
-                                       <div class="price-box">
-                                          <p class="special-price"> <span>$150.00</span> </p>
-                                       </div>
-                                       <div class="button-order"><a href="cart.html">Order Now</a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="row">
-                              <div class="col-md-3 col-sm-6 col-xs-12 col-xs-small-1">
-                                 <div class="product-grid">
-                                    <div class="feature-img">
-                                       <a href="productdetail.html"> <img src="{% static '/images/m5.png' %}" alt="Bánh vani" class="img-responsive"> </a>
-                                    </div>
-                                    <div class="prod-info">
-                                       <div class="pro-title">
-                                          <a href="productdetail.html">Cheese Pizza</a> 
-                                       </div>
-                                       <p>Nam fringilla bibendum elit sed cursus. Sed ut lectus a ipsum tincidunt tempus. Praesent </p>
-                                       <div class="price-box">
-                                          <p class="special-price"> <span>$150.00</span> </p>
-                                       </div>
-                                       <div class="button-order"><a href="cart.html">Order Now</a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-3 col-sm-6 col-xs-12 col-xs-small-1">
-                                 <div class="product-grid">
-                                    <div class="feature-img">
-                                       <a href="productdetail.html"> <img src="{% static '/images/m6.png' %}" alt="Bánh kem bạc hà" class="img-responsive"> </a>
-                                    </div>
-                                    <div class="prod-info">
-                                       <div class="pro-title">
-                                          <a href="productdetail.html">Cheese Pizza</a> 
-                                       </div>
-                                       <p>Nam fringilla bibendum elit sed cursus. Sed ut lectus a ipsum tincidunt tempus. Praesent </p>
-                                       <div class="price-box">
-                                          <p class="special-price"> <span>$150.00</span> </p>
-                                       </div>
-                                       <div class="button-order"><a href="cart.html">Order Now</a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-3 col-sm-6 col-xs-12 col-xs-small-1">
-                                 <div class="product-grid">
-                                    <div class="feature-img">
-                                       <a href="productdetail.html"> <img src="{% static '/images/m7.png' %}" alt="Bánh ngọt" class="img-responsive"> </a>
-                                    </div>
-                                    <div class="prod-info">
-                                       <div class="pro-title">
-                                          <a href="productdetail.html">Cheese Pizza</a> 
-                                       </div>
-                                       <p>Nam fringilla bibendum elit sed cursus. Sed ut lectus a ipsum tincidunt tempus. Praesent </p>
-                                       <div class="price-box">
-                                          <p class="special-price"> <span>$150.00</span> </p>
-                                       </div>
-                                       <div class="button-order"><a href="cart.html">Order Now</a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-3 col-sm-6 col-xs-12 col-xs-small-1">
-                                 <div class="product-grid">
-                                    <div class="feature-img">
-                                       <a href="productdetail.html"> <img src="{% static '/images/m8.png' %}" alt="Chocolate nhân kem" class="img-responsive"> </a>
-                                    </div>
-                                    <div class="prod-info">
-                                       <div class="pro-title">
-                                          <a href="productdetail.html">Cheese Pizza</a> 
-                                       </div>
-                                       <p>Nam fringilla bibendum elit sed cursus. Sed ut lectus a ipsum tincidunt tempus. Praesent </p>
-                                       <div class="price-box">
-                                          <p class="special-price"> <span>$150.00</span> </p>
-                                       </div>
-                                       <div class="button-order"><a href="cart.html">Order Now</a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
+                                 {% cycle '' '' '' '</div><div class="row">' %}
+                              {% endfor %}
                            </div>
                         </div>
                      </div>
